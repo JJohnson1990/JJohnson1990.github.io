@@ -3,6 +3,7 @@ import pluginVue from 'eslint-plugin-vue'
 import pluginVitest from '@vitest/eslint-plugin'
 import pluginCypress from 'eslint-plugin-cypress/flat'
 import skipFormatting from '@vue/eslint-config-prettier/skip-formatting'
+import eslintConfigAirbnbBase from 'eslint-config-airbnb-base'
 
 export default [
   {
@@ -15,6 +16,7 @@ export default [
     ignores: ['**/dist/**', '**/dist-ssr/**', '**/coverage/**'],
   },
 
+  eslintConfigAirbnbBase.rules,
   js.configs.recommended,
   ...pluginVue.configs['flat/essential'],
   
